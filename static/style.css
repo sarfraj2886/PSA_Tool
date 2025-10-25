@@ -1,0 +1,114 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background-color: #f0f2f5;
+}
+
+/* Tool container black */
+.container {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 30px;
+    width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(255,255,255,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Password input + icons horizontal */
+#password-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-icons {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* horizontal spacing */
+}
+
+/* Eye toggle button (blue 3D) */
+.eye-btn {
+    background-color: #1E90FF;
+    color: #fff;
+    border-radius: 8px;
+    padding: 6px 10px;
+    box-shadow: 0 4px #155f9e, 0 4px 6px rgba(0,0,0,0.5);
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+}
+.eye-btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px #155f9e, 0 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Generator button (green 3D) */
+.gen-btn {
+    background-color: #32CD32;
+    color: #fff;
+    border-radius: 8px;
+    padding: 6px 10px;
+    box-shadow: 0 4px #228B22, 0 4px 6px rgba(0,0,0,0.5);
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+}
+.gen-btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px #228B22, 0 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Lock/Shield icon 3D + shadow */
+.icon svg {
+    width: 24px;
+    height: 24px;
+    filter: drop-shadow(1px 2px 2px rgba(0,0,0,0.7));
+    transition: transform 0.1s;
+}
+.icon svg:hover {
+    transform: rotateY(15deg) rotateX(10deg) scale(1.1);
+}
+
+/* Input field */
+input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #555;
+    border-radius: 6px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+/* Strength bar */
+#strength-bar {
+    display: flex;
+    height: 12px;
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    background: #333;
+}
+
+.strength-segment {
+    flex: 1;
+    transition: opacity 0.4s;
+    opacity: 0.3;
+}
+
+.strength-segment.weak { background: red; }
+.strength-segment.moderate { background: orange; }
+.strength-segment.strong { background: yellowgreen; }
+.strength-segment.very-strong { background: green; }
+
+/* Strength text and suggestions */
+#strength-text, #entropy-text, #suggestions, #suggestions li {
+    color: #ffffff;
+}
