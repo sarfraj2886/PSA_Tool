@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Password Strength Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h2>🔐 Password Strength Analyzer</h2>
+
+    <div id="password-wrapper">
+        <input type="password" id="password" placeholder="Enter your password">
+        <div class="input-icons">
+            <button id="toggle-eye" class="eye-btn" title="Show/Hide Password">👁️</button>
+            <button id="generate-pass" class="gen-btn" title="Generate Random Password">🎲</button>
+            <div id="icon" class="icon"></div>
+        </div>
+    </div>
+
+    <div id="strength-bar">
+        <div class="strength-segment weak"></div>
+        <div class="strength-segment moderate"></div>
+        <div class="strength-segment strong"></div>
+        <div class="strength-segment very-strong"></div>
+    </div>
+
+    <p id="strength-text">Strength: </p>
+    <p id="entropy-text">Entropy: 0 bits</p>
+
+    <ul id="suggestions"></ul>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
